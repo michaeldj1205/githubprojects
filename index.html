@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Portfolio</title>
     <style>
@@ -19,9 +17,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100%;
-            max-width: 800px; /* or any value you deem fit */
+            min-height: 100vh;
+            max-width: 800px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         header {
@@ -43,14 +42,28 @@
         }
 
         img.profile-pic {
-            width: 200px;
+            max-width: 100%;
             height: auto;
             margin: 20px auto;
             display: block;
         }
+
+        /* Add responsive CSS for smaller screens */
+        @media (max-width: 768px) {
+            header {
+                padding: 5px 0;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            img.profile-pic {
+                max-width: 80%;
+            }
+        }
     </style>
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -66,7 +79,7 @@
             <h2>About Me</h2>
             <img src="profile.png" alt="Your Name's Profile Picture" class="profile-pic">
             <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
         </section>
 
@@ -82,7 +95,7 @@
         <section id="contact">
             <h2>Contact</h2>
             <p>
-              You can send me an email throught michaeldj1205@gmail.com
+                You can send me an email through michaeldj1205@gmail.com
             </p>
         </section>
 
@@ -91,5 +104,4 @@
         </footer>
     </div>
 </body>
-
 </html>
